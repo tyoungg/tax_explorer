@@ -39,7 +39,7 @@ if run_btn:
 
         with col2:
             fig = plot_rounding_histogram(df.loc[cash_mask], title="Distribution of Rounding Effects (Cash Only)")
-            st.plotly_chart(fig, use_container_width=True)
+            st.plotly_chart(fig, width='stretch')
 
             st.info(f"**Scenario:** In a business with {n_transactions:,} transactions where {cash_pct}% are cash, "
                     f"the {'retailer' if total_effect > 0 else 'consumer'} {'gained' if total_effect > 0 else 'saved'} "

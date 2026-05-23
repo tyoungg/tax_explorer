@@ -51,7 +51,7 @@ with col2:
         x_label="Tax Rate (%)",
         y_label="Average Bias ($)"
     )
-    st.plotly_chart(fig, use_container_width=True)
+    st.plotly_chart(fig, width='stretch')
 
     st.markdown("""
     ### Observations
