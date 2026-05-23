@@ -51,7 +51,7 @@ with col2:
         z_col='Avg Bias',
         title="Avg Bias by Tax Rate and Price Ending"
     )
-    st.plotly_chart(fig, use_container_width=True)
+    st.plotly_chart(fig, width='stretch')
 
 st.markdown("""
 ### How to read this

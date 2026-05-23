@@ -36,7 +36,7 @@ with col2:
 
     with tab1:
         fig_hist = plot_rounding_histogram(df, title=f"Rounding Impact Distribution for {ending_type} prices")
-        st.plotly_chart(fig_hist, use_container_width=True)
+        st.plotly_chart(fig_hist, width='stretch')
 
     with tab2:
         st.markdown("""
@@ -49,7 +49,7 @@ with col2:
         - **3, 4, 8, 9:** Rounding up
         """)
         fig_digit = plot_last_digit_distribution(df)
-        st.plotly_chart(fig_digit, use_container_width=True)
+        st.plotly_chart(fig_digit, width='stretch')
 
 st.dataframe(df.style.format({
     'price': '{:.2f}',
@@ -57,4 +57,4 @@ st.dataframe(df.style.format({
     'total': '{:.2f}',
     'rounded': '{:.2f}',
     'effect': '{:+.2f}'
-}), use_container_width=True)
+}), width='stretch')

@@ -52,7 +52,7 @@ res_df = pd.DataFrame(results).sort_values('Avg Bias ($)', ascending=False)
 
 with col2:
     st.subheader("County Rankings")
-    st.dataframe(res_df.style.background_gradient(subset=['Avg Bias ($)'], cmap='RdBu_r'), height=600, use_container_width=True)
+    st.dataframe(res_df.style.background_gradient(subset=['Avg Bias ($)'], cmap='RdBu_r'), height=600, width='stretch')
 
 st.markdown("""
 ### Interpretation
